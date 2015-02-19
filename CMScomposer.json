@@ -1,4 +1,4 @@
-﻿{
+{
     "name": "yada-project",
     "description": "The Yada Project",
     "homepage": "http://yada-project.github.com",
@@ -88,6 +88,6 @@
     },
     "config": {
         "bin-dir": "bin/"
-    },
+    }
 
 }
