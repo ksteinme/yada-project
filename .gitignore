@@ -26,3 +26,6 @@ bin/phpunit
 vendor/*
 
 composer.phar
+.DS_Store
+*.swp
+.idea
