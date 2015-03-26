@@ -12,6 +12,9 @@ if File.exists?('/etc/gentoo-release')
     sudo "echo 'date.timezone = America/Chicago' > /etc/php/cgi-php5.4/ext-active/timezone.ini"
     sudo "echo 'date.timezone = America/Chicago' > /etc/php/cli-php5.4/ext-active/timezone.ini"
     sudo "echo 'date.timezone = America/Chicago' > /etc/php/fpm-php5.4/ext-active/timezone.ini"
+    
+    # prepare config files
+    run "copy #{config.shared_path}/config/parameters.yml >> #{config.release_path}/app/config/piarameters.yml"
 
 #    composerFlag = '--dev'
 #    if config.framework_env == 'production'
