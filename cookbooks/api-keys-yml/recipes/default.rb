@@ -1,7 +1,7 @@
 if ['app_master', 'app', 'util', 'solo'].include?(node[:instance_role])
   node[:applications].each do |app, data|
-    template "/data/#{app}/shared/config/api-keys.yml"do
-      source 'api-keys.yml.erb'
+    template "/data/#{app}/shared/config/parameters.yml"do
+      source 'parameters.yml.erb'
       owner node[:owner_name]
       group node[:owner_name]
       mode 0655

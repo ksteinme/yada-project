@@ -36,6 +36,7 @@
 
 #uncomment to run the ssmtp recipe
 #include_recipe "ssmtp"
+ include_recipe "main::mail"
 
 #uncomment to run the sunspot recipe
 # include_recipe "sunspot"
@@ -74,6 +75,8 @@ require_recipe "packages"
 
 #uncomment to run the api-keys-yml recipe
  include_recipe "api-keys-yml"
+
+ include_recipe "timezone"
 
 #include_recipe "logrotate"
 #
