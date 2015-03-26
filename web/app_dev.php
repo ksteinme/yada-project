@@ -5,6 +5,7 @@ use Symfony\Component\HttpFoundation\Request;
 if (!in_array(@$_SERVER['REMOTE_ADDR'], array(
     '127.0.0.1',
     '172.33.33.1',
+    '71.13.171.2',
     '::1',
 ))) {
     header('HTTP/1.0 403 Forbidden');
