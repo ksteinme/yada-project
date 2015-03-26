@@ -1,6 +1,6 @@
 if File.exists?('/etc/debian_version')
     # prepare config files
-    run "copy #{config.shared_path}/config/parameters.yml >> #{config.release_path}/app/config/piarameters.yml"
+    run "copy #{config.shared_path}/config/parameters.yml >> #{config.release_path}/app/config/parameters.yml"
 
     # timezone
     sudo "echo 'date.timezone = America/Chicago' > /etc/php5/cli/conf.d/timezone.ini"
@@ -31,6 +31,6 @@ if File.exists?('/etc/gentoo-release')
 
     if runs_php
         sudo "/usr/bin/composer self-update"
-#        run "/usr/bin/composer install --no-interaction --working-dir #{config.release_path} #{composerFlag}"
+        run "/usr/bin/composer install --no-interaction --working-dir #{config.release_path} #{composerFlag}"
     end
 end
